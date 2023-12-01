@@ -1,0 +1,82 @@
+.header-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 120px;
+  gap: 20px;
+}
+
+.header-a {
+  cursor: pointer;
+  color: var(--hospital-purple);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header-a:hover {
+  color: var(--dark-blue);
+}
+
+.home-divMancha1{
+  position: absolute;
+  width: clamp(0px, calc(122% - 1400px ), 160px);
+  height: 140px;
+  top: 800px;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.home-divMancha1--img {
+  width: 160px;
+  height: 140px;
+  z-index: 0;
+}
+
+.homeMancha2 {
+  position: absolute;
+  width: 340px;
+  height: 349px;
+  top: 1200px;
+  left: clamp(-340px, calc(100% - 1400px), 0%);
+  z-index: 0;
+}
+
+.home-divMancha3 {
+  position: absolute;
+  width: clamp(0px, calc(122% - 1400px ), 320px);
+  height: 177px;
+  top: 2000px;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.home-divMancha3--img {
+  width: 320px;
+  height: 177px;
+  z-index: 0;
+}
+
+.homeMancha4 {
+  position: absolute;
+  width: 240px;
+  height: 203px;
+  top: 2540px;
+  left: clamp(-264px, calc(100% - 1400px), 0%);
+  z-index: 0;
+}
+
+@media (max-width: 1200px) {
+  .header-buttons {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 940px) {
+  .header-buttons {
+    display: none;
+  }
+}
+
+

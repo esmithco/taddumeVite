@@ -1,0 +1,18 @@
+.ButtonThird {
+    background-color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+    border-radius: 25px;
+    color: var(--yellow);
+    width: 80px;
+    cursor: pointer;
+    font-size: 15px;
+    height: 36px;
+    font-weight: bold;
+  }
+  
+  .ButtonThird:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: 1px solid var(--yellow);
+  }
+  
