@@ -1,4 +1,4 @@
-import { useRoutes, HashRouter as BrowserRouter } from 'react-router-dom';
+import { useRoutes, BrowserRouter } from 'react-router-dom';
 import { FractionProvider } from '../../Contexts/FractionContext';
 import { Home } from '../Home';
 import { Curiosities } from '../Curiosities';
@@ -25,7 +25,7 @@ const AppRoutes = () => {
 
 function App() {
   return (
-    <BrowserRouter basename='taddume.com/'>
+    <BrowserRouter>
       <FractionProvider>
         <AppRoutes />
       </FractionProvider>
