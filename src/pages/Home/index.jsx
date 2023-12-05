@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Header } from '../../components/Header';
 import { ButtonPrimary } from '../../components/ButtonPrimary';
 import { MenuHeader } from "../../components/MenuHeader";
@@ -12,6 +12,11 @@ import { images } from "../../assets/images";
 import './Home.css'
 
 function Home() {
+
+  useEffect(() => {
+    document.title = 'Taddume | Home'
+  }, []);
+  
   return (
     <>
       <Header img1={images.imgColorLogo} img2={images.imgLogoMobile}>

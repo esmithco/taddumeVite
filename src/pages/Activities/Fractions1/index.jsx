@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { FractionContext } from '../../../Contexts/FractionContext';
 import { Header } from '../../../components/Header';
 import { MenuHeader } from '../../../components/MenuHeader';
@@ -9,6 +9,11 @@ import { images } from "../../../assets/images";
 import './Fractions1.css'
 
 function Fractions1() {
+  
+  useEffect(() => {
+    document.title = 'Actividad: Fracciones 1'
+  }, []);
+
   const {
     handleButtonClick,
   } = useContext(FractionContext);
