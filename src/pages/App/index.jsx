@@ -1,4 +1,4 @@
-import { useRoutes, BrowserRouter } from 'react-router-dom';
+import { useRoutes, HashRouter } from 'react-router-dom';
 import { FractionProvider } from '../../Contexts/FractionContext';
 import { Home } from '../Home';
 import { Curiosities } from '../Curiosities';
@@ -25,11 +25,11 @@ const AppRoutes = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <FractionProvider>
         <AppRoutes />
       </FractionProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
