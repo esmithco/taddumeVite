@@ -2,6 +2,7 @@ import React from "react";
 import { images } from "../../assets/images";
 import { ButtonSecondary } from "../ButtonSecondary";
 import "./HomeNews.css";
+import { NavLink } from "react-router-dom";
 
 function HomeNews(props) {
   return (
@@ -23,9 +24,9 @@ function HomeNews(props) {
             estudios ¿Qué esperas para aprender?
           </p>
 
-          <a href="../activities/curiosidades/games1.html">
+          <NavLink to='/activities/fractions1'>
             <ButtonSecondary text="Comenzar" />
-          </a>
+          </NavLink>
         </div>
 
         <div className="HomeNews-img">
