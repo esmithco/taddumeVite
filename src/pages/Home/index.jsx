@@ -23,7 +23,7 @@ function Home() {
         <MenuHeader />
         <div className="header-buttons">
           <a className="header-a">
-            Ingresar
+            Ingresar madafaca
           </a>
           <ButtonPrimary text="Crear cuenta" />
         </div>
