@@ -1,0 +1,106 @@
+.login {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.login-form {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	width: 300px;
+}
+
+.login-form--img {
+	width: 150px;
+	margin-bottom: 48px;
+	justify-self: center;
+	display: none;
+}
+
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.a-forget {
+	color: var(--hospital-purple);
+	font-size: var(--sm);
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 54px;
+}
+
+
+.label {
+	font-size: var(--sm);
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.input {
+	background-color: var(--white);
+	border: 1px solid var(--dark-blue);
+	border-radius: 8px;
+	height: 30px;
+	font-size: var(--md);
+	padding: 6px;
+	margin-bottom: 12px;
+}
+
+.input-email {
+	margin-bottom: 22px;
+}
+
+.primary-button {
+	background-color: var(--hospital-purple);
+	border: none;
+	border-radius: 8px;
+	color: var(--white);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 50px;
+}
+
+.secondary-button {
+	background-color: var(--white);
+	border: 1px solid var(--hospital-purple);
+	border-radius: 8px;
+	color: var(--hospital-purple);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 50px;
+}
+
+.secondary-button:hover {
+	background-color: var(--dark-blue);
+	color: var(--white);
+}
+
+.login-button {
+	margin-top: 14px;
+	margin-bottom: 30px;
+}
+
+.login-button:hover {
+	background-color: var(--yellow);
+	color: var(--hospital-purple);
+}
+
+@media (max-width: 640px) {
+	.login-form--img {
+		display: block;
+	}
+
+	.secondary-button {
+		width: 300px;
+		position: absolute;
+		bottom: 0;
+		margin-bottom: 24px;
+	}
+}

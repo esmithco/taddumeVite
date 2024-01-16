@@ -1,0 +1,18 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-gray: #f6f7f9;
+    --text-input-field: #f7f7f7;
+    --hospital-purple: #5e37d1;
+    --yellow: #ffbe1a;
+    --dark-blue: #002337;
+    --diameter: 300px;
+    --height: calc(var(--diameter) / 2);
+  }
+  
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: var(--very-light-gray);
+  }
