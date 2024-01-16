@@ -1,64 +1,49 @@
-import { router } from "./routes/jwtAuth.js";
-import { dashboard } from "./routes/dashboard.js";
-import "dotenv/config";
-import { pool } from "./db.js"
-import express from "express";
-import cors from "cors";
+// Crear una función que devuelve una promesa
+function hacerAlgoAsync() {
+    return new Promise((resolve, reject) => {
+      // Simular una operación asincrónica (puede ser una solicitud HTTP, acceso a una base de datos, etc.)
+      setTimeout(() => {
+        const exito = false; // Simular éxito o fracaso de la operación
+  
+        if (exito) {
+          resolve('¡La operación se completó con éxito!'); // Resuelve la promesa si la operación fue exitosa
+        } else {
+          reject('¡Hubo un error en la operación!'); // Rechaza la promesa si la operación falló
+        }
+      }, 2000); // Simular una operación que tarda 2 segundos
+    });
+  }
+  
+  // Función para manejar la resolución
+  function manejarExito(resultado) {
+    console.log('Operación exitosa:', resultado);
+    return resultado
+  }
+  
+  // Función para manejar el rechazo
+  function manejarError(error) {
+    console.log('Error test:', error);
+    throw new Error('error en fun 2');
+  }
+  
+  // Utilizar la promesa creada y pasar las funciones para manejar resolución y rechazo
+  hacerAlgoAsync()
+    .then(manejarExito)
+    .catch(() => { console.log('catch p')})
+    .then(manejarExito)
+    .then(null)
+    .then(manejarError,manejarExito)
+    .catch(() => { console.log('catch p')})
+    // .then(manejarError)
+    // .then(manejarExito,manejarError)
+    // .then(manejarExito);
 
 
-const app = express();
-
-// middleware
-app.use(express.json())
-app.use(cors());
-
-
-
-// Routes
-app.use("/auth", router);
-
-//dashboard
-app.use("/dashboard", dashboard);
-
-// app.get("/api/bd", async (req, res) => {
-//   try {
-//     const client = await pool.connect();
-//     const result = await client.query("SELECT * FROM tbUsers");
-//     client.release(); 
-//     res.send(JSON.stringify(result.rows));
-//   } catch (error) {
-//     console.error("Error al obtener usuarios", error);
-//     res.status(500).send("Error del servidor");
-//   }
-// });
-
-// app.get("/api/error", async (req, res) => {
-//     res.status(404).send("Ruta erronea");
-// });
-
-// app.get("/api/users/:name", async (req, res) => {
-//   try {
-//     const client = await pool.connect();
-//     const result = await client.query("SELECT * FROM tbUsers");
-//     client.release();
-//     const name = req.params.name;
-//     const data = result.rows.filter(user => user.name === name);
-
-
-//     if (data.length === 0) {
-//       return res.status(404).send("Sin data");
-//     } 
-
-//     res.send(data);
-
-//   } catch (error) {
-//     console.error("Error al obtener usuarios");
-//   }
-// });
-
-
-// Port
-const PORT = process.env.PORT
-app.listen(PORT, () => {
-  console.log(`Servidor Express corriendo en el puerto ${PORT}`);
-});
+    // .then(() => {
+    //     return 10
+    // })
+    // .then((valor) => {
+    //     console.log(valor + 1);
+    // })
+    // .then(null, manejarError);
+  
